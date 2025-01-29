@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "ea8f12ea-86e6-42b8-8770-eef8eb74c27b",
+		"name": "E-commerce_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27468946"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "POST /auth/signup (Vendor)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Vendor 1\",\r\n  \"email\": \"vendor@gmail.com\",\r\n  \"password\": \"vendor123\",\r\n  \"role\": \"vendor\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /auth/signup (User)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"User 1\",\r\n  \"email\": \"user@gmail.com\",\r\n  \"password\": \"user123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /auth/login (User)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"user@gmail.com\",\r\n    \"password\" : \"user123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /auth/login (Vendor)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"vendor@gmail.com\",\r\n    \"password\" : \"vendor123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST/auth/login (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"password\" : \"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST/auth/login (Staff)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"staff@gmail.com\",\r\n    \"password\" : \"staff123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder will contain the folowing APIs  \nPOST /auth/signup (Vendor)  \nPOST /auth/signup (Buyer)  \nPOST /auth/login (Vendor)  \nPOST /auth/login (Buyer)\n\nPOST/auth/login (Admin)"
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "GET /admin/users (Admin)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzMDk4OCwiZXhwIjoxNzM4MTM0NTg4fQ.zbcfru4ZGP3yi9ot5T0pVzJFQV7LepWdUy-Iq4SW4Lc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /admin/vendors(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzMDk4OCwiZXhwIjoxNzM4MTM0NTg4fQ.zbcfru4ZGP3yi9ot5T0pVzJFQV7LepWdUy-Iq4SW4Lc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/admin/vendors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /admin/staffs(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzMDk4OCwiZXhwIjoxNzM4MTM0NTg4fQ.zbcfru4ZGP3yi9ot5T0pVzJFQV7LepWdUy-Iq4SW4Lc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/admin/staffs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /admin/products(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzMDk4OCwiZXhwIjoxNzM4MTM0NTg4fQ.zbcfru4ZGP3yi9ot5T0pVzJFQV7LepWdUy-Iq4SW4Lc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "IPhone 15",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Product description",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Category 1",
+									"type": "text"
+								},
+								{
+									"key": "scheduledStartDate",
+									"value": "2025-02-01",
+									"type": "text"
+								},
+								{
+									"key": "oldPrice",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "newPrice",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "freeDelivery",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/lsure/OneDrive/Pictures/WhatsApp Image 2024-12-30 at 10.51.28_ef58cff4.jpg"
+								},
+								{
+									"key": "vendorId",
+									"value": "6799bffe79ea9e6ca6f62f0c",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /admin/assign-vendors(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzNTgxMiwiZXhwIjoxNzM4MTM5NDEyfQ.f55jHwHnTLHEjePP_70FJbcauKE45a_zVI-9isnuQCc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"staffId\": \"6799c44a14908fa98f01d72c\",  \r\n  \"vendorIds\": [\r\n    \"6799bffe79ea9e6ca6f62f0c\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/assign-vendors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"assign-vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /users/staff (Staff)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMjQ3MTQ5MDhmYTk4ZjAxZDcyNSIsImlhdCI6MTczODEzMDI4MywiZXhwIjoxNzM4MTMzODgzfQ.U0-NjVj4r_08P0jXTOxm1fNHkjpHqiEseaV-LGCkZ-0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Staff\",\r\n    \"email\" : \"staff@gmail.com\",\r\n    \"password\" : \"staff123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/staff",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"staff"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder will contain the following APIs\n\nGET /admin/users (Admin)\n\nGET /admin/vendors(Admin)\n\nGET /admin/staffs(Admin)  \nPOST /admin/products(Admin)\n\nPOST /admin/assign-vendors(Admin)\n\nPOST /users/staff (Staff)"
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "GET /products (Staff)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTliZmZlNzllYTllNmNhNmY2MmYwYyIsImlhdCI6MTczODEzNDQ1NSwiZXhwIjoxNzM4MTM4MDU1fQ.GQU2AIHPQZSMzpQzCakWBVu5OXI-sCPeIl5Pvv_2HpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /products/create(Staff)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljNDRhMTQ5MDhmYTk4ZjAxZDcyYyIsImlhdCI6MTczODE0MzA1NiwiZXhwIjoxNzM4MTQ2NjU2fQ.uzAIQvUOtuLTe3gQ18w-1ED64pcq6lF8bpGgcOzX3uc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"IPhone 16 pro\",\r\n  \"description\": \"Product description\",\r\n  \"category\": \"Category 1\",\r\n  \"scheduledStartDate\": \"2025-02-01\",\r\n  \"oldPrice\": 100,\r\n  \"newPrice\": 80,\r\n  \"freeDelivery\": true,\r\n  \"vendorId\": \"6799bffe79ea9e6ca6f62f0c\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder will contain the following APIs:\n\nGET /products (Staff)  \nPOST /products/create (Staff)"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GET /products (User)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMDZiNzllYTllNmNhNmY2MmYwZiIsImlhdCI6MTczODE0MzkxOSwiZXhwIjoxNzM4MTQ3NTE5fQ.rVx2XET3ZLMOzceCwam_3oBZ2Qa1LUQR_PfsW91xGZk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder will contain the following APIs:\n\nGET /products (User)"
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "POST /products/create(Vendor)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTliZmZlNzllYTllNmNhNmY2MmYwYyIsImlhdCI6MTczODE0MjIzMywiZXhwIjoxNzM4MTQ1ODMzfQ.kcd1l4FUwVvYO4RX5zez5fEtAcBglhYIQuB4cmfhu0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Vendor's Product\",\r\n  \"description\": \"Exclusive vendor item\",\r\n  \"category\": \"Fashion\",\r\n  \"scheduledStartDate\": \"2025-02-01\",\r\n  \"oldPrice\": 1500,\r\n  \"newPrice\": 1200,\r\n  \"freeDelivery\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /products (Vendor)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTliZmZlNzllYTllNmNhNmY2MmYwYyIsImlhdCI6MTczODE0MjIzMywiZXhwIjoxNzM4MTQ1ODMzfQ.kcd1l4FUwVvYO4RX5zez5fEtAcBglhYIQuB4cmfhu0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder will contain the following APIs:\n\nGET /products (Vendor)  \nPOST /products/create (Vendor)"
+		},
+		{
+			"name": "Search&PaginationCheck",
+			"item": [
+				{
+					"name": "GET /products?page=1&limit=10&search=IPhone",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTljMDZiNzllYTllNmNhNmY2MmYwZiIsImlhdCI6MTczODE0NDQ2NSwiZXhwIjoxNzM4MTQ4MDY1fQ.mQceymRpp87BnQ_mP_nNWMp_XUQeIKSzCBdzAL5vmfg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?page=1&limit=10&search=IPhone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "IPhone"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
